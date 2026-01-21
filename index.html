@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Playwright</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 50px auto; padding: 20px; background: #1a1a2e; color: #fff; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; font-size: 16px; }
+        button { width: 100%; padding: 14px; background: #22c55e; color: #000; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        #resultado { margin-top: 20px; padding: 20px; background: #16213e; border-radius: 8px; text-align: center; display: none; }
+        #suma { font-size: 32px; color: #22c55e; }
+    </style>
+</head>
+<body>
+    <h2>🧮 Sumadora Simple</h2>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <button id="btnSumar" onclick="sumar()">Sumar</button>
+    <div id="resultado">
+        <p>Resultado:</p>
+        <p id="suma">0</p>
+    </div>
+    <script>
+        function sumar() {
+            const a = parseFloat(document.getElementById('num1').value) || 0;
+            const b = parseFloat(document.getElementById('num2').value) || 0;
+            document.getElementById('suma').textContent = a + b;
+            document.getElementById('resultado').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
